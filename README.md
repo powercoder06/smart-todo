@@ -1,11 +1,10 @@
 # Smart Todo List with AI Integration
 
 A full-stack task management app featuring:
-- AI-powered suggestions
-- Context-aware entries
-- Django REST Framework backend
-- Next.js + Tailwind CSS frontend
-- Local LLM hosting via LM Studio
+- AI-powered suggestions: Priority scoring, deadline recommendations, smart categorization, and enhanced descriptions.
+- Context-aware: Ingest notes, emails, and WhatsApp snippets to inform AI.
+- Modern stack: Django REST Framework backend, Next.js + Tailwind CSS frontend.
+- Local LLM hosting via LM Studio, no external API keys required.
 
 ## Setup
 
