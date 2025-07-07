@@ -33,10 +33,10 @@ A full-stack task management app featuring:
 - Task Management: CRUD tasks with title, description, category, status, priority, deadline.
 - Context Entries: Store free-form notes, emails, WhatsApp snippets.
 - AI Integration:
-Task Prioritization: AI assigns a priority score (0–1).
-Deadline Suggestions: AI recommends realistic future deadlines.
-Smart Categorization: AI suggests category tags.
-Description Enhancement: AI Enhances Task Descriptions.
+  - Sub Task Prioritization: AI assigns a priority score (0–1).
+  - Sub Deadline Suggestions: AI recommends realistic future deadlines.
+  - Sub Smart Categorization: AI suggests category tags.
+  - Sub Description Enhancement: AI Enhances Task Descriptions.
 - Dark/Light Theme: Toggleable via the header.
 - Local LLM Hosting with LM Studio (e.g. Llama-3.2-1b-instruct or qwen3-8b).
 
