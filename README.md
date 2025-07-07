@@ -43,15 +43,14 @@ Description Enhancement: AI Enhances Task Descriptions.
 ## 3. Tech Stack
 
 - Backend:
-- Sub Python 3.12, Django 5.2.4, Django REST Framework
-- Sub LM Studio (lms CLI + Python SDK) for local LLM
-- Sub SQLite (dev) / Supabase Postgres (prod)
-- Sub django-cors-headers for CORS
-
--Frontend:
-- Sub Next.js 15, React 19
-- Sub Tailwind CSS 4, PostCSS, Autoprefixer
-- Turbopack dev server
+  - Sub Python 3.12, Django 5.2.4, Django REST Framework
+  - Sub LM Studio (lms CLI + Python SDK) for local LLM
+  - Sub SQLite (dev) / Supabase Postgres (prod)
+  - Sub django-cors-headers for CORS
+- Frontend:
+  - Sub Next.js 15, React 19
+  - Sub Tailwind CSS 4, PostCSS, Autoprefixer
+  - Turbopack dev server
 
 ## Setup
 
