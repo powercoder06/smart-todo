@@ -116,7 +116,7 @@ npm run dev
 | `NEXT_PUBLIC_API_BASE_URL` | 	Frontend ↔ Backend base URL, e.g. http://127.0.0.1:8000/api |
 
 
-## API Documentation
+## 6. API Documentation
 All endpoints are prefixed with `/api/`.
 
 **Categories**
@@ -130,3 +130,92 @@ All endpoints are prefixed with `/api/`.
 - DELETE `/categories/{id}/`
 
 **Tasks**
+- GET `/tasks/`
+```
+[
+  {
+    "id": 1,
+    "title": "Buy groceries",
+    "description": "...",
+    "category": { "id": 2, "name": "Personal", "usage_frequency": 5 },
+    "priority_score": 0.85,
+    "deadline": "2025-07-10T18:00:00Z",
+    "status": "pending",
+    "created_at": "2025-07-04T08:00:00Z",
+    "updated_at": "2025-07-04T09:00:00Z"
+  },
+  …
+]
+```
+- POST `/tasks/`
+```
+{ 
+  "title": "Plan trip",
+  "description": "Find a cabin near the lake",
+  "category_id": 1
+}
+```
+- GET/PUT/DELETE `/tasks/{id}/`
+
+**AI Suggestion**
+- POST `/tasks/{id}/ai-suggest/`
+Input JSON:
+```
+{
+  "title": "Plan weekend trip",
+  "description": "Find a cabin near the lake and book flights",
+  "category_id": 1,
+  "context_entry_ids": [3, 5]
+}
+```
+Response JSON:
+```
+{
+  "priority_score": 0.75,
+  "deadline": "2025-07-10T18:00:00Z",
+  "categories": ["Travel", "High-Priority"],
+  "enhanced_description": "I’ve expanded your description with recommended dates..."
+}
+```
+
+**Context Entries**
+- GET `/context/`
+- POST `/context/`
+```
+{
+  "task_id": 1,
+  "content": "Got an email from Airbnb about cabin availability.",
+  "source_type": "email"
+}
+```
+-GET/PUT/DELETE `/context/{id}/`
+
+## 7. Sample Data
+### Categories
+```
+INSERT INTO todo_category (name, usage_frequency) VALUES
+('Work', 10),
+('Personal', 7),
+('Urgent', 3);
+```
+### Tasks
+```
+INSERT INTO todo_task (title, description, category_id, priority_score, deadline, status)
+VALUES
+('Wash clothes', 'I have to wash weekend laundry', 1, 0.2, '2025-07-06T12:00:00Z',' pending'),
+('Buy groceries', 'Get milk, eggs, bread', 2, 0.5, '2025-07-05T18:00:00Z','pending');
+```
+### Context Entries
+```
+INSERT INTO todo_contextentry (task_id, content, source_type, timestamp)
+VALUES
+(1, 'Reminder: laundry on Monday', 'note', '2025-07-04T09:00:00Z'),
+(2, 'WhatsApp: “Don’t forget eggs!”', 'whatsapp','2025-07-04T10:00:00Z');
+```
+## 8. Requirements
+- Backend
+```
+pip freeze > requirements.txt
+```
+- Frontend
+package.json and package-lock.json are already included.
