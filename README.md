@@ -52,7 +52,7 @@ A full-stack task management app featuring:
   - Sub Tailwind CSS 4, PostCSS, Autoprefixer
   - Turbopack dev server
 
-## Setup & Installations
+## 4. Setup & Installations
 
 ### Backend
 1. Clone & create venv
@@ -106,6 +106,17 @@ NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8000/api
 ```
 npm run dev
 ```
+## 5. Environment Variables
+
+| Name | Description |
+| --- | --- |
+| `SECRET_KEY` | 	Django secret key |
+| `DEBUG` | True or False |
+| `DB_ENGINE` | 		e.g. django.db.backends.postgresql |
+| `DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT` | 	Database connection |
+| `LMSTUDIO_MODEL` | 		LM Studio model identifier (e.g. llama-3.2-1b-instruct)|
+| `NEXT_PUBLIC_API_BASE_URL` | 	Frontend ↔ Backend base URL, e.g. http://127.0.0.1:8000/api |
+
 
 ## API
 - GET/POST /api/tasks/
