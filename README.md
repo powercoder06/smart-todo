@@ -6,6 +6,18 @@ A full-stack task management app featuring:
 - Modern stack: Django REST Framework backend, Next.js + Tailwind CSS frontend.
 - Local LLM hosting via LM Studio, no external API keys required.
 
+## Table of Contents 
+1. Screenshots
+2. Features
+3. Tech Stack
+4. Setup & Installation
+  - Backend
+  - Frontend
+5. Environment Variables
+6. API Documentation
+7. Sample Data
+8. Requirements
+
 ## Setup
 
 ### Backend
