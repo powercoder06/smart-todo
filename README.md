@@ -52,16 +52,41 @@ A full-stack task management app featuring:
   - Sub Tailwind CSS 4, PostCSS, Autoprefixer
   - Turbopack dev server
 
-## Setup
+## Setup & Installations
 
 ### Backend
+1. Clone & create venv
 ```
-cd smart-todo-backend
+git clone https://github.com/your-username/smart-todo.git
+cd smart-todo/smart-todo-backend
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate    # Windows: venv\Scripts\activate
+```
+2. Install dependencies
+```
+pip install --upgrade pip
 pip install -r requirements.txt
-cp .env.example .env
-# edit .env
+```
+3. Environment
+- Create a .env file in smart-todo-backend/:
+```
+# Django
+SECRET_KEY=your-secret-key
+DEBUG=True
+
+# Database (Supabase or local)
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=postgres
+DB_USER=postgres
+DB_PASSWORD=your-db-password
+DB_HOST=db.basimmdlhpwoizkjarxo.supabase.co
+DB_PORT=5432
+
+# LM Studio
+LMSTUDIO_MODEL=llama-3.2-1b-instruct
+```
+4. Migrate & run
+```
 python manage.py migrate
 python manage.py runserver
 ```
