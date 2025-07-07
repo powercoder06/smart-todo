@@ -18,6 +18,17 @@ A full-stack task management app featuring:
 7. Sample Data
 8. Requirements
 
+## 1. Screenshots
+
+### Dashboard
+![image](https://github.com/user-attachments/assets/7add74de-ca49-43d9-a308-1e5962fc68af)
+
+### Context 
+![image](https://github.com/user-attachments/assets/67bc00d5-c4e6-457d-8d05-9bc12108ac66)
+
+### Edit Task
+![image](https://github.com/user-attachments/assets/bf098053-35ed-4dd8-832f-5dfd4ebeb19e)
+
 ## Setup
 
 ### Backend
