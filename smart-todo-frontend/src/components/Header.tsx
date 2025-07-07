@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 'use client'
 
 import Link from 'next/link'
@@ -8,7 +7,6 @@ import ThemeToggle from './ThemeToggle'
 export default function Header() {
   const pathname = usePathname()
 
-  // nav items to render
   const navItems = [
     { href: '/', label: 'Dashboard' },
     { href: '/context', label: 'Context' },

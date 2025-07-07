@@ -1,5 +1,3 @@
-# todo/urls.py
-
 from django.urls import path
 from .views import (
     CategoryListCreateView,
@@ -8,8 +6,7 @@ from .views import (
     TaskDetailView,
     ContextEntryListCreateView,
     ContextEntryDetailView,
-    TaskAISuggestView,         # ← make sure this matches your class name
-)
+    TaskAISuggestView,         
 
 urlpatterns = [
     # Categories

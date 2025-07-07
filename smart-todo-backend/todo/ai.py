@@ -1,4 +1,3 @@
-# todo/ai.py
 import re
 import os
 import json
@@ -73,7 +72,6 @@ Respond **only** with JSON.
     else:
         raw = str(prediction)
 
-    # *** NEW: strip out any <think>…</think> chains ***
     raw_clean = re.sub(r"<think>.*?</think>", "", raw, flags=re.DOTALL).strip()
 
     # now grab the JSON between the first { and last }

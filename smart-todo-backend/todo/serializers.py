@@ -23,8 +23,8 @@ class TaskSerializer(serializers.ModelSerializer):
             'id',
             'title',
             'description',
-            'category',     # nested on GET
-            'category_id',  # use on POST/PUT
+            'category',    
+            'category_id', 
             'priority_score',
             'deadline',
             'status',
@@ -52,7 +52,6 @@ class AISuggestionInputSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=255)
     description = serializers.CharField()
     category_id = serializers.IntegerField(required=False)
-    # optionally, you could accept a list of context-entry IDs to consider
     context_entry_ids = serializers.ListField(
         child=serializers.IntegerField(), 
         required=False, 

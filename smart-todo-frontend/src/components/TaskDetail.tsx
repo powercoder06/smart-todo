@@ -106,7 +106,6 @@ const handleAi = async () => {
       throw new Error(body.detail || JSON.stringify(body))
     }
 
-    // apply the AI suggestion
     updateField("priority_score", body.priority_score)
       updateField("deadline",       body.deadline)
       updateField("description",    body.enhanced_description)

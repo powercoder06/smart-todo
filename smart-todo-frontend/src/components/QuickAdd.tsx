@@ -34,13 +34,10 @@ const handleSubmit = async (e: React.FormEvent) => {
   const data = await resp.json();
   if (!resp.ok) {
     console.error("Failed to create task:", resp.status, data);
-    // Optionally show the error to the user:
     alert(`Error creating task:\n${JSON.stringify(data)}`);
     setLoading(false);
     return;
   }
-
-  // success path
   setTitle("");
   setDescription("");
   setLoading(false);

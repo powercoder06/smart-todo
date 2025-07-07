@@ -1,4 +1,3 @@
-// src/components/TaskCard.tsx
 import Link from "next/link"
 import { CalendarIcon, TagIcon, ArrowUpIcon } from "@heroicons/react/24/outline"
 import { format } from "date-fns"
@@ -27,7 +26,6 @@ export default function TaskCard({ task }: { task: Task }) {
           hover:shadow-lg hover:scale-[1.01] transform transition
         "
       >
-        {/* Left side: title, description, category */}
         <div className="flex-1">
           <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
             {task.title}
@@ -50,7 +48,6 @@ export default function TaskCard({ task }: { task: Task }) {
           </div>
         </div>
 
-        {/* Right side: due date & priority */}
         <div className="mt-4 md:mt-0 flex flex-col items-start md:items-end space-y-2">
           <div className="inline-flex items-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
             <CalendarIcon className="w-4 h-4" />

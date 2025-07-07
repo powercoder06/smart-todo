@@ -1,9 +1,8 @@
-// src/app/context/page.tsx
+
 import ContextEntryCard from "@/components/ContextEntryCard"
 import QuickAddContext from "@/components/QuickAddContext"
 
 export default async function ContextPage() {
-  // Server-side fetch of all context entries
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/context/`,
     { cache: "no-store" }
@@ -17,8 +16,6 @@ export default async function ContextPage() {
       <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow p-6 mb-8">
         <QuickAddContext />
       </div>
-
-       {/* Empty state */}
       {entries.length === 0 ? (
         <p className="text-gray-600 dark:text-gray-400">
           No context yet. Add one above!
