@@ -11,8 +11,6 @@ A full-stack task management app featuring:
 2. Features
 3. Tech Stack
 4. Setup & Installation
-  - Sub Backend
-  - Sub Frontend
 5. Environment Variables
 6. API Documentation
 7. Sample Data
@@ -121,8 +119,14 @@ npm run dev
 ## API Documentation
 All endpoints are prefixed with `/api/`.
 
-- GET/POST /api/tasks/
-- GET/PUT/DELETE /api/tasks/{id}/
-- POST /api/tasks/{id}/ai-suggest/
-- GET/POST /api/context/
-- GET/PUT/DELETE /api/context/{id}/
+**Categories**
+- GET `/categories/`: List all categories.
+- POST `/categories/`:  Create a new category.
+```
+{ "name": "Work" }
+```
+- GET `/categories/{id}/`
+- PUT `/categories/{id}/`
+- DELETE `/categories/{id}/`
+
+**Tasks**
