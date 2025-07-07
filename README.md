@@ -11,8 +11,8 @@ A full-stack task management app featuring:
 2. Features
 3. Tech Stack
 4. Setup & Installation
-  - Backend
-  - Frontend
+  - Sub Backend
+  - Sub Frontend
 5. Environment Variables
 6. API Documentation
 7. Sample Data
@@ -42,12 +42,12 @@ A full-stack task management app featuring:
 
 ## 3. Tech Stack
 
-- Backend:
+- **Backend**:
   - Sub Python 3.12, Django 5.2.4, Django REST Framework
   - Sub LM Studio (lms CLI + Python SDK) for local LLM
   - Sub SQLite (dev) / Supabase Postgres (prod)
   - Sub django-cors-headers for CORS
-- Frontend:
+- **Frontend**:
   - Sub Next.js 15, React 19
   - Sub Tailwind CSS 4, PostCSS, Autoprefixer
   - Turbopack dev server
@@ -118,7 +118,9 @@ npm run dev
 | `NEXT_PUBLIC_API_BASE_URL` | 	Frontend ↔ Backend base URL, e.g. http://127.0.0.1:8000/api |
 
 
-## API
+## API Documentation
+All endpoints are prefixed with `/api/`.
+
 - GET/POST /api/tasks/
 - GET/PUT/DELETE /api/tasks/{id}/
 - POST /api/tasks/{id}/ai-suggest/
