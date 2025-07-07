@@ -29,6 +29,17 @@ A full-stack task management app featuring:
 ### Edit Task
 ![image](https://github.com/user-attachments/assets/bf098053-35ed-4dd8-832f-5dfd4ebeb19e)
 
+## 2. Features
+- Task Management: CRUD tasks with title, description, category, status, priority, deadline.
+- Context Entries: Store free-form notes, emails, WhatsApp snippets.
+- AI Integration:
+Task Prioritization: AI assigns a priority score (0–1).
+Deadline Suggestions: AI recommends realistic future deadlines.
+Smart Categorization: AI suggests category tags.
+Description Enhancement: AI Enhances Task Descriptions.
+- Dark/Light Theme: Toggleable via the header.
+- Local LLM Hosting with LM Studio (e.g. Llama-3.2-1b-instruct or qwen3-8b).
+
 ## Setup
 
 ### Backend
