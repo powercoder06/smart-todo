@@ -68,7 +68,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 3. Environment
-- Create a .env file in smart-todo-backend/:
+Create a .env file in smart-todo-backend/:
 ```
 # Django
 SECRET_KEY=your-secret-key
@@ -92,11 +92,18 @@ python manage.py runserver
 ```
 
 ### Frontend
+1. Install & start
 ```
-cd smart-todo-frontend
+cd ../smart-todo-frontend
 npm install
-cp .env.local.example .env.local
-# edit .env.local
+```
+2. Environment
+Create a .env.local in smart-todo-frontend/:
+```
+NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8000/api
+```
+3. Dev server
+```
 npm run dev
 ```
 
